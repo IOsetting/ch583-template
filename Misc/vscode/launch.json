@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/Build/app.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "serverpath": "/opt/openocd/wch-openocd-v1.70/bin/openocd",
+            "configFiles": [
+                "${workspaceFolder}/Misc/wch-riscv.cfg.v1.70"
+            ],
+            "runToEntryPoint": "main",
+            "preLaunchTask": "TimerDemo: build",   // task from tasks.json
+            // "preLaunchCommands": ["Build all"], if not using preLaunchTask
+            "showDevDebugOutput": "parsed", // log level: parsed, raw, both(include parsed and raw)
+            "device": "CH58X",
+            "svdFile": "${workspaceFolder}/Misc/CH58Xxx.svd",
+            //"toolchainPrefix": "/opt/gcc-riscv/riscv-wch-embedded-gcc-v1.70/bin/riscv-none-embed"
+            "toolchainPrefix": "/opt/gcc-riscv/xpack-riscv-none-elf-gcc-12.2.0-3/bin/riscv-none-elf"
+        }
+    ]
+}
