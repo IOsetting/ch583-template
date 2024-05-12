@@ -2,7 +2,7 @@
 
 PROJECT			?= app
 # Top path of the template
-TOP				= ../..
+TOP				= .
 # The path for generated files
 BUILD_DIR		= Build
 
@@ -16,12 +16,12 @@ BUILD_DIR		= Build
 #GCC_TOOCHAIN	?= /opt/gcc-riscv/xpack-riscv-none-elf-gcc-12.2.0-3/bin
 #GCC_TOOCHAIN	?= /opt/gcc-riscv/riscv-wch-embedded-gcc-v1.60/bin
 #GCC_TOOCHAIN	?= /opt/gcc-riscv/riscv-wch-embedded-gcc-v1.70/bin
-GCC_TOOCHAIN	?= /opt/gcc-riscv/riscv-wch-embedded-gcc-v1.91/bin
-#GCC_TOOCHAIN	?= /opt/gcc-riscv/riscv-wch-embedded-gcc12-v170/bin
+#GCC_TOOCHAIN	?= /opt/gcc-riscv/riscv-wch-embedded-gcc-v1.91/bin
+GCC_TOOCHAIN	?= /opt/gcc-riscv/riscv-wch-embedded-gcc12-v170/bin
 
 # GCC 12: riscv-none-elf-
 # GCC 11 and below: riscv-none-embed-
-GCC_PREFIX		?= riscv-none-embed-
+GCC_PREFIX		?= riscv-none-elf-
 
 OPENOCD_PATH	?= /opt/openocd/wch-openocd-v1.91/bin
 
@@ -53,4 +53,4 @@ INCLUDES	:= Apps/TimerDemo/src \
 
 ##### Optional Libraries ############
 
-include ../../rules.mk
+include ./rules.mk
