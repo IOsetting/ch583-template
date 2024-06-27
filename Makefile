@@ -33,21 +33,21 @@ OPENOCD_CFG 	= Misc/wch-riscv.cfg.v1.91
 LIB_FLAGS		= 
 
 # C source folders
-CDIRS	:= Apps/TimerDemo/src \
+CDIRS	:= User \
 		Libraries/RVMSIS \
 		Libraries/StdPeriphDriver
 # C source files (if there are any single ones)
 CFILES := 
 
 # ASM source folders
-ADIRS	:= Apps/TimerDemo/src
+ADIRS	:= User
 # ASM single files
 AFILES	:= Libraries/Startup/startup_CH583.S
 
 LIBS 	:= Libraries/StdPeriphDriver/libISP583.a
 
 # Include paths
-INCLUDES	:= Apps/TimerDemo/src \
+INCLUDES	:= User \
 		Libraries/RVMSIS \
 		Libraries/StdPeriphDriver/inc
 

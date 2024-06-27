@@ -41,6 +41,8 @@
 #define Debug_UART2        2
 #define Debug_UART3        3
 
+//#define DEBUG           Debug_UART1
+
 #ifdef DEBUG
 #include <stdio.h>
 #endif
